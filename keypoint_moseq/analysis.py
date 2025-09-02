@@ -194,6 +194,7 @@ def compute_moseq_df(project_dir, model_name, results_dict=None, *, fps=30, smoo
     if os.path.exists(index_filepath):
         index_data = pd.read_csv(index_filepath, index_col=False)
     else:
+        index_data = None
         print(
             "index.csv not found, if you want to include group information for each video, please run the Assign Groups widget first"
         )
